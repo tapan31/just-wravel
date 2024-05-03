@@ -17,7 +17,7 @@ function Hero() {
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="flex justify-between">
+      <div className="flex flex-col items-center md:flex-row justify-between md:items-start">
         <div className="relative z-10">
           <h1 className="text-7xl my-12 font-bold">
             Book Your <br /> Trip to{" "}
@@ -58,28 +58,28 @@ function Hero() {
         <div className="flex items-center gap-2">
           <FontAwesomeIcon size="2x" icon={faStar} />
           <p className="leading-tight">
-            <span className="font-semibold text-xl">5135+</span> <br />{" "}
+            <span className="font-semibold md:text-xl">5135+</span> <br />{" "}
             <span className="text-xs">Reviews</span>
           </p>
         </div>
         <div className="flex items-center gap-2">
           <FontAwesomeIcon size="2x" icon={faPerson} />
           <p className="leading-tight">
-            <span className="font-semibold text-xl">78965+</span> <br />{" "}
+            <span className="font-semibold md:text-xl">78965+</span> <br />{" "}
             <span className="text-xs">Satisfied Travellers</span>
           </p>
         </div>
         <div className="flex items-center gap-2">
           <FontAwesomeIcon size="2x" icon={faPersonHiking} />
           <p className="leading-tight">
-            <span className="font-semibold text-xl">50+</span> <br />{" "}
+            <span className="font-semibold md:text-xl">50+</span> <br />{" "}
             <span className="text-xs">Destinations</span>
           </p>
         </div>
         <div className="flex items-center gap-2">
           <FontAwesomeIcon size="2x" icon={faBagShopping} />
           <p className="leading-tight">
-            <span className="font-semibold text-xl">7 Years+</span> <br />{" "}
+            <span className="font-semibold md:text-xl">7 Years+</span> <br />{" "}
             <span className="text-xs">Experience</span>
           </p>
         </div>
