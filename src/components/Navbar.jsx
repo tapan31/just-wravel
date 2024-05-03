@@ -10,7 +10,7 @@ function Navbarr() {
         <img src={Logo} className="mr-3 h-6 sm:h-12" alt="Logo" />
       </Navbar.Brand>
       <div className="flex gap-5 items-center md:order-2">
-        <div className="flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <FontAwesomeIcon icon={faPhone} />
           <p className="flex flex-col gap-0 text-sm">
             Call us <span className="font-semibold m-0">+91 9865423147</span>
