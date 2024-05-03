@@ -4,6 +4,7 @@ import SelectTours from "../components/SelectTours";
 import TripCard from "../components/TripCard";
 import AuthContext from "../context/AuthContext";
 import { Navigate } from "react-router-dom";
+import Cards from "../components/DestinationCard";
 
 function Home() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -24,6 +25,7 @@ function Home() {
           <TripCard />
         </div>
       </div>
+      <Cards />
     </div>
   );
 }

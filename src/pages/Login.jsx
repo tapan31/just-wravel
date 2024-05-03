@@ -6,6 +6,7 @@ function Login() {
   const { isLoggedIn, login } = useContext(AuthContext);
   const [username, setUserName] = useState("atuny0");
   const [password, setPassword] = useState("9uQFF1Lh");
+  const [isLoading, setIsLoading] = useState(false);
 
   if (isLoggedIn) {
     return <Navigate to="/" />;
@@ -13,6 +14,8 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     fetch("https://dummyjson.com/auth/login", {
       method: "POST",
@@ -28,7 +31,9 @@ function Login() {
         console.log(data);
 
         login(data);
-      });
+        setIsLoading(false);
+      })
+      .catch(() => setIsLoading(false));
   };
 
   function getFakeCredentials() {
@@ -78,10 +83,11 @@ function Login() {
             />
           </div>
           <button
+            disabled={isLoading}
             type="submit"
             className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            Sign in
+            {isLoading ? "Please wait..." : "Sign in"}
           </button>
           <button
             onClick={getFakeCredentials}
